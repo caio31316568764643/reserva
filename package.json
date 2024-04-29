@@ -1,0 +1,13 @@
+{
+  "name": "reserva",
+  "version": "1.0.0",
+  "description": "_Linguagem de Programaçao_  - **carlpro**",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["node.js","mongodb"],
+  "author": "caio da silva garcia",
+  "license": "MIT"
+}
+
