@@ -3,6 +3,18 @@ import * as Yup from 'yup'
 
 class SessionController{
     async store (req,res){
-        
+        const Schema = Yup.object().shape({
+            email: Yup.string().email().requird(),
+        })
+        const { email } = req.body
+        if (!(await Schema.isValid(req.body))){
+            return res.status(400).json({error: 'falha na validaçao'})
+        }
+        let user = await User.FindOne({ email })
+        if (!user)(
+            user = await User.create({ email })
+        )
+        return res.json(user)
     }
 }
+export default new SessionController()
