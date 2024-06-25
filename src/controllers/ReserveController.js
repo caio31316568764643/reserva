@@ -1,4 +1,4 @@
-import  Reserve from '../models/Reserve';
+import  Reserve from '../models/reserve';
 import User from '../models/user';
 import House from '../models/House';
 import { Connection } from 'mongoose';
